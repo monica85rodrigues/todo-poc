@@ -1,1 +1,4 @@
-# todo-poc
+# Todo Service Playground
+
+A project for testing the Use Case concept in a service.
+
