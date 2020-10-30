@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TodoList.UseCases;
 using TodoList.UseCases.Requests;
+using TodoList.UseCases.Responses;
 
 namespace TodoList.Api.Controllers
 {
@@ -17,19 +18,11 @@ namespace TodoList.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet()]
-        public async Task<IActionResult> GetTodos()
+        [HttpGet]
+        public async Task<IActionResult> Get([FromServices] IUseCaseAsync<Nothing, GetTodosResponse> useCase)
         {
-            var useCase = new GetTodosUseCase();
-            var todos = await useCase.ExecuteAsync(new Nothing());
-            return Ok(todos);
-        }
-
-        [HttpPost()]
-        public async Task<IActionResult> CreateTodo(TodoRequest todo, [FromServices] IUseCaseAsync<TodoRequest> useCase)
-        {
-            await useCase.ExecuteAsync(todo);
-            return Ok(todo);
+            var response = await useCase.ExecuteAsync(new Nothing());
+            return Ok(response.Todos);
         }
     }
 }

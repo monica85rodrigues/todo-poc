@@ -1,6 +1,4 @@
 ﻿namespace TodoList.UseCases.Requests
 {
-    public sealed class Nothing
-    {
-    }
+    public sealed class Nothing { }
 }
