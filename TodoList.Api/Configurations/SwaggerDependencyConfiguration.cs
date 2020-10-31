@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
@@ -6,22 +7,34 @@ namespace TodoList.Api.Configurations
 {
     public static class SwaggerDependencyConfiguration
     {
-        public static IServiceCollection AddSwaggerDependency(this IServiceCollection services)
+        private const string AppName = "SwaggerSettings:AppName";
+        private const string Version = "SwaggerSettings:Version";
+        private const string SwaggerUrl = "SwaggerSettings:Url";
+        
+        public static IServiceCollection AddSwaggerDependency(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo() {Title = "Todo API", Version = "v1"});
+                c.SwaggerDoc(
+                    configuration[Version], 
+                    new OpenApiInfo()
+                    {
+                        Title = configuration[AppName], 
+                        Version = configuration[Version]
+                    });
             });
 
             return services;
         }
 
-        public static IApplicationBuilder UseSwaggerTool(this IApplicationBuilder app)
+        public static IApplicationBuilder UseSwaggerTool(this IApplicationBuilder app, IConfiguration configuration)
         {
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API");
+                c.SwaggerEndpoint(
+                    configuration[SwaggerUrl], 
+                    configuration[AppName]);
             });
             
             return app;

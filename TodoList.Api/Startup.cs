@@ -18,7 +18,7 @@ namespace TodoList.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddSwaggerDependency()
+                .AddSwaggerDependency(this.Configuration)
                 .AddUseCasesDependency()
                 .AddRepositoriesDependency()
                 .AddControllers();
@@ -26,7 +26,7 @@ namespace TodoList.Api
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSwaggerTool()
+            app.UseSwaggerTool(this.Configuration)
                 .UseRouting()
                 .UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
