@@ -20,6 +20,7 @@ namespace TodoList.Api
             services
                 .AddSwaggerDependency()
                 .AddUseCasesDependency()
+                .AddRepositoriesDependency()
                 .AddControllers();
         }
         

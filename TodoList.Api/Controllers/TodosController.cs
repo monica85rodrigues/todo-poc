@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TodoList.Dtos.Requests;
+using TodoList.Dtos.Responses;
 using TodoList.UseCases;
-using TodoList.UseCases.Requests;
-using TodoList.UseCases.Responses;
 
 namespace TodoList.Api.Controllers
 {
