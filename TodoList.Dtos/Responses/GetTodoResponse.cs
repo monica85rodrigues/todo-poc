@@ -1,4 +1,4 @@
-﻿namespace TodoList.UseCases.Responses
+﻿namespace TodoList.Dtos.Responses
 {
     public class GetTodoResponse
     {
