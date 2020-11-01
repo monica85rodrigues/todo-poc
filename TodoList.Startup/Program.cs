@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace TodoList.Api
+namespace TodoList.Startup
 {
     public class Program
     {

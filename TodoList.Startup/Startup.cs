@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TodoList.Api.Configurations;
+using TodoList.Startup.Configurations;
 
-namespace TodoList.Api
+namespace TodoList.Startup
 {
     public class Startup
     {
