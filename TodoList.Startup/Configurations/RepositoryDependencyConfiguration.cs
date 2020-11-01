@@ -2,7 +2,7 @@
 using TodoList.Core;
 using TodoList.Repository;
 
-namespace TodoList.Api.Configurations
+namespace TodoList.Startup.Configurations
 {
     public static class RepositoryDependencyConfiguration
     {

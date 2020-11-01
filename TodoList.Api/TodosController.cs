@@ -5,11 +5,11 @@ using TodoList.Dtos.Requests;
 using TodoList.Dtos.Responses;
 using TodoList.UseCases;
 
-namespace TodoList.Api.Controllers
+namespace TodoList.Api
 {
     [ApiController]
     [Route("api/todos")]
-    public class TodosController : ControllerBase
+    public class TodosController : Controller
     {
         private readonly ILogger<TodosController> _logger;
 

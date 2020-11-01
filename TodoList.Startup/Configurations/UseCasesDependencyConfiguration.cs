@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TodoList.UseCases;
 
-namespace TodoList.Api.Configurations
+namespace TodoList.Startup.Configurations
 {
     public static class UseCaseDependencyConfiguration
     {
