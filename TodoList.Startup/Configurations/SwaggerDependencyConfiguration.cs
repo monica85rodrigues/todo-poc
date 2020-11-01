@@ -13,15 +13,18 @@ namespace TodoList.Startup.Configurations
         
         public static IServiceCollection AddSwaggerDependency(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc(
+                options.SwaggerDoc(
                     configuration[Version], 
                     new OpenApiInfo()
                     {
                         Title = configuration[AppName], 
                         Version = configuration[Version]
                     });
+                
+                options.TagActionsBy(api => new[] { api.GroupName });
+                options.DocInclusionPredicate((_, __) => true);
             });
 
             return services;
