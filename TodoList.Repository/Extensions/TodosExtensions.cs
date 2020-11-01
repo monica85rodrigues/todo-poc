@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TodoList.Dtos.Requests;
 using TodoList.Dtos.Responses;
 using TodoList.Repository.DataModels;
 
@@ -23,6 +24,24 @@ namespace TodoList.Repository.Extensions
             {
                 Id = todo.Id,
                 Name = todo.Name
+            };
+        }
+
+        internal static Todo ToDataModel(this CreateTodoRequest request)
+        {
+            return new Todo
+            {
+                Id = request.Id,
+                Name = request.Name
+            };
+        }
+
+        internal static CreateTodoResponse ToCreateTodoResponse(this Todo response)
+        {
+            return new CreateTodoResponse
+            {
+                Id = response.Id,
+                Name = response.Name
             };
         }
     }

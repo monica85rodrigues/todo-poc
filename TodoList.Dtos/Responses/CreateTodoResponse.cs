@@ -1,6 +1,6 @@
-﻿namespace TodoList.Repository.DataModels
+﻿namespace TodoList.Dtos.Responses
 {
-    public class Todo
+    public class CreateTodoResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

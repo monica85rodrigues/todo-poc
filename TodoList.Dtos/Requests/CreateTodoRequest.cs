@@ -1,6 +1,6 @@
-﻿namespace TodoList.Repository.DataModels
+﻿namespace TodoList.Dtos.Requests
 {
-    public class Todo
+    public class CreateTodoRequest
     {
         public int Id { get; set; }
         public string Name { get; set; }

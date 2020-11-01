@@ -10,11 +10,16 @@ namespace TodoList.Api.Configurations
             services.Scan(
                 scan => scan
                     .FromApplicationDependencies()
-                    .AddClasses(classes => 
+                    .AddClasses(classes =>
+                        classes.AssignableTo(typeof(IUseCaseAsync<>)))
+                    .AsImplementedInterfaces()
+                    .WithTransientLifetime()
+                    
+                    .AddClasses(classes =>
                         classes.AssignableTo(typeof(IUseCaseAsync<,>)))
                     .AsImplementedInterfaces()
                     .WithTransientLifetime());
-            
+
             return services;
         }
     }

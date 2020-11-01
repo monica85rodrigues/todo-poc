@@ -24,5 +24,12 @@ namespace TodoList.Api.Controllers
             var response = await useCase.ExecuteAsync(new Nothing());
             return Ok(response.Todos);
         }
+        
+        [HttpPost]
+        public async Task<IActionResult> CreateTodo([FromServices] IUseCaseAsync<CreateTodoRequest, CreateTodoResponse> useCase, [FromBody]CreateTodoRequest request)
+        {
+            var response = await useCase.ExecuteAsync(request);
+            return Ok(response);
+        }
     }
 }
