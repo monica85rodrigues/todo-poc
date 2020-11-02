@@ -1,0 +1,8 @@
+﻿namespace TodoList.Contracts.Dtos
+{
+    public class Todo
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+}

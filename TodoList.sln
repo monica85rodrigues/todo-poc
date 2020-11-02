@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Startup", "TodoList.Startup\TodoList.Startup.csproj", "{DBDBBABE-2915-49DC-994A-1A34102D6665}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Startup", "src\TodoList.Startup\TodoList.Startup.csproj", "{DBDBBABE-2915-49DC-994A-1A34102D6665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.UseCases", "TodoList.UseCases\TodoList.UseCases.csproj", "{BFFFC75E-5439-4044-8C3C-9C2C8628D6E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.UseCases", "src\TodoList.UseCases\TodoList.UseCases.csproj", "{BFFFC75E-5439-4044-8C3C-9C2C8628D6E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Repository", "TodoList.Repository\TodoList.Repository.csproj", "{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Repository", "src\TodoList.Repository\TodoList.Repository.csproj", "{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Dtos", "TodoList.Dtos\TodoList.Dtos.csproj", "{FCB68414-5CAC-458A-A4B1-7BBC54805F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Contracts", "src\TodoList.Contracts\TodoList.Contracts.csproj", "{AFE343CE-9886-4A55-82DA-B6692E1EE001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Core", "TodoList.Core\TodoList.Core.csproj", "{AFE343CE-9886-4A55-82DA-B6692E1EE001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Api", "src\TodoList.Api\TodoList.Api.csproj", "{90F9D052-6F59-4DEB-8E2F-8639E62FF452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Api", "TodoList.Api\TodoList.Api.csproj", "{90F9D052-6F59-4DEB-8E2F-8639E62FF452}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{728D13F2-05AC-461D-82C9-3BF36759B100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +30,6 @@ Global
 		{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FCB68414-5CAC-458A-A4B1-7BBC54805F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCB68414-5CAC-458A-A4B1-7BBC54805F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCB68414-5CAC-458A-A4B1-7BBC54805F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCB68414-5CAC-458A-A4B1-7BBC54805F75}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFE343CE-9886-4A55-82DA-B6692E1EE001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFE343CE-9886-4A55-82DA-B6692E1EE001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFE343CE-9886-4A55-82DA-B6692E1EE001}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +38,12 @@ Global
 		{90F9D052-6F59-4DEB-8E2F-8639E62FF452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F9D052-6F59-4DEB-8E2F-8639E62FF452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F9D052-6F59-4DEB-8E2F-8639E62FF452}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90F9D052-6F59-4DEB-8E2F-8639E62FF452} = {728D13F2-05AC-461D-82C9-3BF36759B100}
+		{AFE343CE-9886-4A55-82DA-B6692E1EE001} = {728D13F2-05AC-461D-82C9-3BF36759B100}
+		{A3E4DB51-3ADE-4B17-870D-CD32C6340BDF} = {728D13F2-05AC-461D-82C9-3BF36759B100}
+		{DBDBBABE-2915-49DC-994A-1A34102D6665} = {728D13F2-05AC-461D-82C9-3BF36759B100}
+		{BFFFC75E-5439-4044-8C3C-9C2C8628D6E3} = {728D13F2-05AC-461D-82C9-3BF36759B100}
 	EndGlobalSection
 EndGlobal
