@@ -8,8 +8,7 @@ using Xunit;
 
 namespace TodoList.Api.Tests
 {
-    [Collection("Integration Tests")]
-    public class TodosApiControllerTests
+    public class TodosApiControllerTests : IClassFixture<WebApplicationFactory<TodoList.Startup.Startup>>
     {
         private readonly WebApplicationFactory<Startup.Startup> _factory;
 
